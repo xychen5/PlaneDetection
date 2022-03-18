@@ -12,6 +12,12 @@ CONFIG += staticlib
 QMAKE_CXXFLAGS += -std=c++11
 win32:QMAKE_CXXFLAGS += /bigobj
 
+#OUT_PWD = $$PWD/../build
+#DESTDIR = $$PWD/../build/lib
+
+DEFINES += EIGEN_DONT_VECTORIZE \
+    EIGEN_DISABLE_UNALIGNED_ARRAY_ASSERT
+
 SOURCES += \
     affinetransform.cpp \
     camera.cpp \
@@ -72,3 +78,10 @@ else:win32:!win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$OUT_PWD/
 else:unix: PRE_TARGETDEPS += $$OUT_PWD/../CoreLib/libCoreLib.a
 
 INCLUDEPATH += $$PWD/../eigen3
+
+
+message(outpwd is : $$OUT_PWD)
+
+message(pwd is : $$PWD)
+message($$DESTDIR)
+

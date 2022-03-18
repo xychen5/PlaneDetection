@@ -8,6 +8,9 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
+DEFINES += EIGEN_DONT_VECTORIZE \
+    EIGEN_DISABLE_UNALIGNED_ARRAY_ASSERT
+
 TARGET = PointCloudEditor2
 TEMPLATE = app
 win32:LIBS += -lopengl32

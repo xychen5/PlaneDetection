@@ -559,7 +559,7 @@ public:
         std::vector<Point3d> points;
         bool hasColor = false;
         std::string line;
-        std::setlocale(LC_NUMERIC, "en_US.UTF-8");
+        setlocale(LC_NUMERIC, "en_US.UTF-8");
         while (std::getline(input, line))
         {
             float x, y, z, r = 0, g = 0, b = 0;
