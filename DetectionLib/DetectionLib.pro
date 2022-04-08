@@ -6,6 +6,11 @@
 
 QT       -= gui
 
+# DESTDIR = $$PWD/../build/DetectionLib
+# OUT_PWD = $$PWD/../build/DetectionLib
+message(detectlib: outpwd is : $$OUT_PWD)
+message(detectlib: pwd is : $$PWD)
+
 TARGET = DetectionLib
 TEMPLATE = lib
 CONFIG += staticlib

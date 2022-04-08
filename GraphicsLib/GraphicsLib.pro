@@ -6,6 +6,10 @@
 
 QT       += widgets opengl
 
+message(graphlib: outpwd is : $$OUT_PWD)
+message(graphlib: pwd is : $$PWD)
+message(graphlib: dest is : $$DESTDIR)
+
 TARGET = GraphicsLib
 TEMPLATE = lib
 CONFIG += staticlib
@@ -80,8 +84,7 @@ else:unix: PRE_TARGETDEPS += $$OUT_PWD/../CoreLib/libCoreLib.a
 INCLUDEPATH += $$PWD/../eigen3
 
 
-message(outpwd is : $$OUT_PWD)
-
-message(pwd is : $$PWD)
-message($$DESTDIR)
+message(graphics: outpwd is : $$OUT_PWD)
+message(graphics: pwd is : $$PWD)
+message(graphics: $$DESTDIR)
 

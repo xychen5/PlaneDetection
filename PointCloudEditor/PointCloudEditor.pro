@@ -5,7 +5,8 @@
 #-------------------------------------------------
 
 QT       += core gui
-
+CONFIG += console \
+          c++17
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 DEFINES += EIGEN_DONT_VECTORIZE \
@@ -41,6 +42,7 @@ SOURCES += main.cpp\
     planedetectordialog.cpp
 
 HEADERS  += mainwindow.h \
+    ThreadPool.h \
     normaldrawer.h \
     normalestimatorworker.h \
     worker.h \

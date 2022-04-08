@@ -25,6 +25,11 @@ public:
         return mTimeElapsed / 1e9;
     }
 
+    double timeElapsedInMSec() const
+    {
+        return mTimeElapsed / 1e6;
+    }
+
 signals:
     void workerStart();
     void workerProgress(float progress);
